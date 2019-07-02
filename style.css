@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+main {
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+.content {
+  float: left;
+  position: relative;
+  width: 300px;
+  margin-right: 30px;
+  padding: 10px;
+  border: 2px solid lightgray;
+}
+.content:last-child {
+  margin-right: 0;
+}
+.step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px;
+  background-color: orange;
+  color: white;
+}
+.content img {
+  width: 100%;
+}
+
+@media screen and (max-width:768px) {
+  .content {
+    float: none;
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}
